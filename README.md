@@ -163,19 +163,19 @@ Open your browser at `http://localhost:8501`.
 ## 8. Screenshots
 
 ### 1. Catalogue Price Update Date
-![alt text](screenshots/01-price-update.png)
+![Price update date](screenshots/01-price-update.png)
 
 ### 2. Publisher Incorporation Year
-![alt text](screenshots/02-incorporation.png)
+![Publisher incorporation year](screenshots/02-incorporation.png)
 
 ### 3. Physics Textbook Price — Out of Scope
-![alt text](screenshots/03-physics-not-found.png)
+![Physics textbook not found](screenshots/03-physics-not-found.png)
 
 ### 4. Current Minister of Education — Out of Scope
-![alt text](screenshots/04-minister-not-found.png)
+![Minister of Education not found](screenshots/04-minister-not-found.png)
 
 ### 5. Best History Book for Beginners — Subjective Query
-![alt text](screenshots/05-best-book-not-found.png)
+![Best history book not found](screenshots/05-best-book-not-found.png)
 
 ## 9. Limitations & Scope
 
