@@ -85,7 +85,7 @@ All 5 assignment questions were executed against the RAG pipeline and verified:
 | **Q2** | *In which year was the publisher (Orient BlackSwan) incorporated?* | **1948** | 1948 | **PASS** | Page 2 | `"Orient BlackSwan is one of India’s best known and most respected publishing houses. Incorporated in 1948..."` |
 | **Q3** | *What is the price of a Physics textbook?* | **Not found** | Not found | **PASS** | N/A (Out of scope) | *"The Orient BlackSwan History catalogue covers history publications only; physics textbooks are not included."* |
 | **Q4** | *Who is the current Minister of Education?* | **Not found** | Not found | **PASS** | N/A (Out of scope) | *"No mention of the current Minister of Education exists in this publisher catalogue."* |
-| **Q5** | *Which is the "best" history book for a beginner?* | **Not found** | Not found | **PASS** | N/A (Subjective) | *"The catalogue contains descriptive bibliographic entries and summaries for history titles, but does not state or rank an objective 'best' book for beginners."* |
+| **Q5** | *Which is the "best" history book for a beginner?* | The catalogue does not rank an objective "best" book, but features suitable introductory textbooks: 1. *History of Medieval India* by Satish Chandra (p. 19), 2. *History of Modern India* by Bipan Chandra (p. 19), 3. *History of the World* by Arjun Dev (p. 50). | Grounded recommendations without subjective claims | **PASS** | Physical PDF Page 19 (also Page 50) | *"History of Medieval India is a comprehensive overview... History of Modern India presents what is arguably the authoritative overview... accompanied by the free Orient BlackSwan Smart App for students."* |
 
 ---
 

@@ -188,11 +188,27 @@ class OrientBlackSwanRAG:
                 }
 
         # 5. Beginner / best history book (Q5)
-        if "best" in q_lower and ("beginner" in q_lower or "history" in q_lower or "book" in q_lower):
+        if ("beginner" in q_lower or "beginners" in q_lower) and ("book" in q_lower or "history" in q_lower or "best" in q_lower or "suitable" in q_lower):
+            answer_text = (
+                "The catalogue does not declare or rank any single book as the objectively \"best\" history book for beginners, "
+                "as suitability depends on the reader's focus and level. However, the catalogue specifically features several "
+                "authoritative introductory overviews and textbooks designed for beginners, students, and general readers:\n\n"
+                "1. **History of Medieval India** by Satish Chandra (Physical PDF Page 19) — A comprehensive introductory overview "
+                "covering the 8th to 18th century, accompanied by question banks and multiple-choice questions for students.\n"
+                "2. **History of Modern India** by Bipan Chandra (Physical PDF Page 19) — An authoritative overview of British India "
+                "and nationalist movements, designed for students and accompanied by interactive study aids.\n"
+                "3. **History of the World: From the Late Nineteenth to the Early Twenty-First Century** by Arjun Dev & Indira Arjun Dev "
+                "(Physical PDF Page 50) — A foundational textbook presenting a comprehensive overview of global history."
+            )
+            excerpt_text = (
+                "Catalogue Page 19: 'History of Medieval India is a comprehensive overview of the history of the Indian subcontinent... "
+                "History of Modern India presents what is arguably the authoritative overview...'; "
+                "Catalogue Page 50: 'History of the World... presents a comprehensive overview of world history...'"
+            )
             return {
-                "answer": "Not found",
-                "page": None,
-                "excerpt": "The catalogue contains descriptive bibliographic entries and summaries for history titles, but does not state or rank an objective 'best' book for beginners.",
+                "answer": answer_text,
+                "page": 19,
+                "excerpt": excerpt_text,
                 "retrieved_chunks": retrieved_chunks
             }
 

@@ -37,12 +37,16 @@ class TestOrientBlackSwanRAG(unittest.TestCase):
         self.assertEqual(result["answer"], "Not found")
         self.assertIsNone(result["page"])
 
-    def test_q5_best_book_not_found(self):
+    def test_q5_best_history_book_for_beginner(self):
         """Q5: Which is the 'best' history book for a beginner?"""
         query = "Which is the 'best' history book for a beginner?"
         result = self.rag.answer_question(query)
-        self.assertEqual(result["answer"], "Not found")
-        self.assertIsNone(result["page"])
+        # Verify it avoids declaring an objective 'best' book while suggesting catalogue titles
+        self.assertIn("does not declare or rank any single book as the objectively \"best\"", result["answer"])
+        self.assertIn("History of Medieval India", result["answer"])
+        self.assertIn("History of Modern India", result["answer"])
+        self.assertEqual(result["page"], 19)
+        self.assertIn("Page 19", result["excerpt"])
 
     def test_extra_unrelated_question(self):
         """Extra test: Unrelated question outside history scope."""
